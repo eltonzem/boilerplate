@@ -4,12 +4,9 @@ import Main from '.'; //nosso conponente
 
 describe('<Main />', () => {
   //é o que a gente quer começar a testar
-  it('should render the heading', () => {
-    //it serve para escrever o que de fato vc quer
-    render(<Main />);
+  it('should render the colors correctly', () => {
+    const { container } = render(<Main />);
 
-    expect(
-      screen.getByRole('heading', { name: /react avançado/i })
-    ).toBeInTheDocument();
+    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' });
   });
 });
