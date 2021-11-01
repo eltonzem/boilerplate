@@ -1,4 +1,4 @@
-import * as S from './style'; //sempre que tiver o S vai ser estilo e não componente
+import * as S from './styles';
 
 const Main = ({
   title = 'React Avançado',
